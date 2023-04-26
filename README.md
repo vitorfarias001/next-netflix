@@ -54,3 +54,14 @@ Running commands with npm `npm run [command]`
 | command         | description                              |
 | :-------------- | :--------------------------------------- |
 | `dev`           | Starts a development instance of the app |
+
+### Warning
+
+If you are having problems with "Favorite"  functionality throwing "Not Signed In" error, It is because you have a newer version of Next & NextAuth, a small modification is needed (you can find it in the github repostory). Here are the steps:
+
+1. Your [...nextauth].ts file should export authOptions separately
+2. Your serverAuth.ts file should use getServerSession(req, res, authOptions) instead of getSession({req})
+3. Modify serverAuth(req) to serverAuth(req, res) everytwhere in your code.
+4. Logout, shutdown the app, login again, everything should work ❤
+
+
