@@ -19,7 +19,7 @@ Features:
 ### Cloning the repository
 
 ```shell
-git clone https://github.com/vitorfarias001/next-netflix-tutorial.git
+git clone https://github.com/vitorfarias001/next-netflix.git
 ```
 
 ### Install packages
